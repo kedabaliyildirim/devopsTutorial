@@ -71,7 +71,7 @@ See [**VM-SETUP.md**](VM-SETUP.md) for the full checklist and troubleshooting.
 
 
 ## ⚙️ CI/CD & Security
-To demonstrate real-world DevSecOps, this repository includes an intentional "failing" security scan. This allows you to practice identifying and remediating secrets in a controlled environment.
+To demonstrate real-world DevSecOps, this repository includes a security scan. This allows you to practice identifying and remediating secrets in a controlled environment.
 
 [![Security Scan](https://github.com/kedabaliyildirim/devopsTutorial/actions/workflows/gitleaks.yml/badge.svg)](https://github.com/kedabaliyildirim/devopsTutorial/actions/workflows/gitleaks.yml)
 
