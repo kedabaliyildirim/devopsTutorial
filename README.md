@@ -69,6 +69,13 @@ See [**VM-SETUP.md**](VM-SETUP.md) for the full checklist and troubleshooting.
 
 ---
 
+
+## ⚙️ CI/CD & Security
+To demonstrate real-world DevSecOps, this repository includes an intentional "failing" security scan. This allows you to practice identifying and remediating secrets in a controlled environment.
+
+[![Security Scan](https://github.com/kedabaliyildirim/devopsTutorial/actions/workflows/gitleaks.yml/badge.svg)](https://github.com/kedabaliyildirim/devopsTutorial/actions/workflows/gitleaks.yml)
+
+
 ## 🧪 Why this Lab?
 
 This curriculum is designed to mirror real-world DevOps and security roles:
