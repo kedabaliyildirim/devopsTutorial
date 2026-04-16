@@ -1,0 +1,42 @@
+# Vagrant
+.vagrant/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+*.tfvars.json
+.terraform.lock.hcl
+
+# Kubernetes
+kubeconfig
+*.kubeconfig
+.kube/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.venv
+venv/
+ENV/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Lab specific
+*.pcap
+*.log
+reports/*.json
+!reports/.gitkeep
+node_modules/
+dist/
+build/

@@ -1,0 +1,14 @@
+name: trufflehog-scan
+on:
+  workflow_dispatch:
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run trufflehog
+        uses: trufflesecurity/trufflehog@main
+        with:
+          path: .
+          extra_args: "--only-verified"

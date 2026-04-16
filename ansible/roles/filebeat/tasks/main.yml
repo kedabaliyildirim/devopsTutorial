@@ -1,0 +1,3 @@
+- name: Install Filebeat (placeholder)
+  debug:
+    msg: "Install Filebeat here"

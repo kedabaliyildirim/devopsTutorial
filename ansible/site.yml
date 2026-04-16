@@ -1,0 +1,6 @@
+- hosts: all
+  become: true
+  roles:
+    - common
+    - firewall
+    # - filebeat   # enable later

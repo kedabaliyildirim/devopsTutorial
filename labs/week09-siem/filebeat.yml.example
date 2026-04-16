@@ -1,0 +1,11 @@
+filebeat.inputs:
+  - type: log
+    enabled: true
+    paths:
+      - /var/log/syslog
+      - /var/log/auth.log
+
+output.elasticsearch:
+  hosts: ["https://your-es-host:9200"]
+  username: "filebeat_user"
+  password: "CHANGE_ME"

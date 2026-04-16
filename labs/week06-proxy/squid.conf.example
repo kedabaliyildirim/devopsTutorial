@@ -1,0 +1,26 @@
+http_port 3128
+
+# ACLs for lab networks
+acl lab_security_net src 192.168.210.0/24  # External/Security network (attacker, proxy)
+acl lab_dmz_net src 192.168.230.0/24       # DMZ network (webserver)
+acl lab_internal_net src 192.168.220.0/24  # Internal network (defender, logserver)
+acl SSL_ports port 443
+acl Safe_ports port 80          # http
+acl Safe_ports port 443         # https
+acl CONNECT method CONNECT
+
+# Deny requests to certain unsafe ports
+http_access deny !Safe_ports
+# Deny CONNECT to other than secure SSL ports
+http_access deny CONNECT !SSL_ports
+
+# Allow access from lab networks
+http_access allow lab_security_net
+http_access allow lab_dmz_net
+http_access allow lab_internal_net
+
+# Deny all other access
+http_access deny all
+
+# Access log
+access_log /var/log/squid/access.log squid

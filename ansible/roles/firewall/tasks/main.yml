@@ -1,0 +1,16 @@
+- name: Copy nftables.conf
+  copy:
+    src: ../../labs/week05-firewall/nftables.conf
+    dest: /etc/nftables.conf
+    owner: root
+    group: root
+    mode: '0644'
+
+- name: Enable and start nftables
+  service:
+    name: nftables
+    state: started
+    enabled: yes
+
+- name: Apply ruleset
+  command: nft -f /etc/nftables.conf

@@ -1,0 +1,7 @@
+falco:
+  json_output: true
+  http_output:
+    enabled: false
+
+falcosidekick:
+  enabled: false
